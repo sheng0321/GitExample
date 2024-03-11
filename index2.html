@@ -455,6 +455,58 @@
 
 
     </div>
+    <!-- carousel -->
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" dataride="
+carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/kindle.png" class="d-block w-80" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/ebook-cover.png" class="d-block w-80" alt="...">
+            </div>
+        </div>
+    </div> -->
+    <div id="carouselExampleIndicators" class="carousel slide bg-dark" dataride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/kindle.png" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+                <img src="assets/ebook-cover.png" class="d-block w-100" />
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- popover -->
+    <div class="container mt-5">
+
+        <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title"
+            data-bs-content="hello, world">Click me</button>
+        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title"
+            data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle
+            popover</button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+            data-bs-placement="top" data-bs-content="Top popover">
+            Popover on top
+        </button>
+    </div>
 
     <hr>
     <footer class="">This is a footer</footer>
@@ -466,6 +518,12 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
         }
+    </script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
     </script>
 </body>
 
